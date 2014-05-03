@@ -1,0 +1,12 @@
+tag 2.0
+fbe36126f0a71c647d6d6176652353ab6806891e
+Lifeismystery <Lifeismystery@yandex.ru>
+2014-01-03 19:01:04 +0400
+
+
+
+--------------------
+
+Lifeismystery:
+	- 1. Unit Frame -  Added options to display combo points.
+	- 1. Unit Frame -  Added options to display combo points.

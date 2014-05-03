@@ -1,0 +1,54 @@
+Identifier = "LifeismysteryUF"
+
+Name = "LifeismysteryUnitFrame"
+Description = "Lifeismystery Unit Frame for use with Gadgets."
+Website = "http://www.riftgame.com"
+Email = "Lifeismystery@yandex.ru"
+
+Version = "1.0.0"
+
+Environment = "1.9"
+
+RunOnStartup = 
+{
+  "templates/LifeismysteryRaidFrame.lua",
+  "templates/LifeismysteryUnitFrame.lua",
+  "templates/LifeismysteryUnitFrame2.lua",
+  "templates/LifeismysteryTargetOfTarget.lua",
+  "templates/LifeismysteryGroupFrame.lua",
+  "templates/LifeismysteryGroupFrame2.lua",  
+  "templates/LifeismysteryDispel.lua",
+  "templates/LifeismysteryMageFrame.lua",
+  "templates/LifeismysteryTanksRaidFrame.lua",
+}
+
+SavedVariables = 
+{
+
+}
+
+Embed = 
+{
+
+}
+
+Dependencies = 
+{
+	Gadgets = {"required", "before"},
+}
+-- X-Curse-Packaged-Version: 1.5
+-- X-Curse-Project-Name: Gadgets: Lifeismystery Unit Frame
+-- X-Curse-Project-ID: gadgets-lifeismystery-unit-frame
+-- X-Curse-Repository-ID: rift/gadgets-lifeismystery-unit-frame/mainline
+-- X-Curse-Packaged-Version: 1.6
+-- X-Curse-Project-Name: Gadgets: Lifeismystery Unit Frame
+-- X-Curse-Project-ID: gadgets-lifeismystery-unit-frame
+-- X-Curse-Repository-ID: rift/gadgets-lifeismystery-unit-frame/mainline
+-- X-Curse-Packaged-Version: 1.9
+-- X-Curse-Project-Name: Gadgets: Lifeismystery Unit Frame
+-- X-Curse-Project-ID: gadgets-lifeismystery-unit-frame
+-- X-Curse-Repository-ID: rift/gadgets-lifeismystery-unit-frame/mainline
+-- X-Curse-Packaged-Version: 2.0
+-- X-Curse-Project-Name: Gadgets: Lifeismystery Unit Frame
+-- X-Curse-Project-ID: gadgets-lifeismystery-unit-frame
+-- X-Curse-Repository-ID: rift/gadgets-lifeismystery-unit-frame/mainline
