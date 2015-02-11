@@ -85,7 +85,7 @@ function WT.UnitFrame.CreateRaidFramesFromConfiguration(configuration)
 
 	local frames = {}
 
-	local _debug = true
+	local _debug = false
 
 
 	--[[for i = 1,20 do
