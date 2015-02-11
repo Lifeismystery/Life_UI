@@ -12,7 +12,6 @@ LifeismysteryRaidFrame.Configuration.Resizable = { 55, 40, 500, 70 }
 LifeismysteryRaidFrame.Configuration.SupportsHoTPanel = true
 LifeismysteryRaidFrame.Configuration.SupportsDebuffPanel = true
 
-
 --------------------------------------------------------------
 function LifeismysteryRaidFrame:Construct(options)
 	local template =
@@ -39,12 +38,12 @@ function LifeismysteryRaidFrame:Construct(options)
 				},
 				growthDirection="left",
 				binding="healthPercent",
-				backgroundColorRaid={r=0.07, g=0.07, b=0.07, a=0.85},
-                backgroundColorBinding="backgroundColorRaid",	
-				--alertHealthColor={r=0.07, g=0.07, b=0.07, a=0.85},
-                --backgroundColorBinding="alertHealthColor",				
+				--backgroundColorRaid={r=0.07, g=0.07, b=0.07, a=0.85},
+                --backgroundColorBinding="backgroundColorRaid",	
+				alertHealthColor={r=0.07, g=0.07, b=0.07, a=0.85},
+                backgroundColorBinding="alertHealthColor",				
 				raidHealthColor2={r=0.5,g=0,b=0, a=0.8},
-				colorBinding="raidHealthColor2",				
+				colorBinding="raidHealthColor2",					
 			},
 			{
 				id="healthCap", type="HealthCap", parent="barHealth", layer=15,
@@ -192,7 +191,7 @@ function LifeismysteryRaidFrame:Construct(options)
 			
 		}
 	}
-	  
+	
 	for idx,element in ipairs(template.elements) do
 	
 		local showElement = true
@@ -231,7 +230,7 @@ function LifeismysteryRaidFrame:Construct(options)
 		self:EventAttach(Event.UI.Input.Mouse.Right.Click, function(self, h)
 			if self.UnitId then Command.Unit.Menu(self.UnitId) end
 		end, "Event.UI.Input.Mouse.Right.Click")
-	end
+	end 
 	
  end  
 	

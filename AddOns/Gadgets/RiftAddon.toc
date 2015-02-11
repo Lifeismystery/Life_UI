@@ -4,7 +4,7 @@
                             wildtide@wildtide.net
                            DoomSprout: Rift Forums 
       -----------------------------------------------------------------
-      Gadgets Framework   : v0.5.4
+      Gadgets Framework   : v0.7.2
       Project Date (UTC)  : 2013-10-06T09:26:25Z
       File Modified (UTC) : 2013-09-22T10:03:11Z (lifeismystery)
       -----------------------------------------------------------------     
@@ -19,9 +19,9 @@ Author = "Wildtide"
 Website = "http://www.wildtide.net"
 Email = "wildtide@wildtide.net"
 
-Version = "v0.5.4"
+Version = "v0.7.2"
 
-Environment = "2.4"
+Environment = "3.1"
 
 RunOnStartup = 
 {
@@ -69,19 +69,7 @@ Dependencies =
 	wtLibCore = {"required", "before"},
 	wtLibUnitFrame = {"required", "before"},
 }
--- X-Curse-Packaged-Version: v0.5.4
--- X-Curse-Project-Name: Gadgets
--- X-Curse-Project-ID: gadgets
--- X-Curse-Repository-ID: rift/gadgets/mainline
--- X-Curse-Packaged-Version: v0.5.6
--- X-Curse-Project-Name: Gadgets
--- X-Curse-Project-ID: gadgets
--- X-Curse-Repository-ID: rift/gadgets/mainline
--- X-Curse-Packaged-Version: v0.5.7
--- X-Curse-Project-Name: Gadgets
--- X-Curse-Project-ID: gadgets
--- X-Curse-Repository-ID: rift/gadgets/mainline
--- X-Curse-Packaged-Version: v0.6.0
+-- X-Curse-Packaged-Version: v0.7.2
 -- X-Curse-Project-Name: Gadgets
 -- X-Curse-Project-ID: gadgets
 -- X-Curse-Repository-ID: rift/gadgets/mainline

@@ -32,7 +32,7 @@ Dependencies =
 {
 	wtLibTranslate = {"required", "before"},
 }
--- X-Curse-Packaged-Version: v0.6.0
+-- X-Curse-Packaged-Version: v0.7.2
 -- X-Curse-Project-Name: Gadgets
 -- X-Curse-Project-ID: gadgets
 -- X-Curse-Repository-ID: rift/gadgets/mainline

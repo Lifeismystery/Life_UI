@@ -1,0 +1,11 @@
+tag 3.1
+777b072ee39eb42cb9963343954f35a35e89764b
+Lifeismystery <Lifeismystery@yandex.ru>
+2014-12-07 02:43:40 +0300
+
+
+
+--------------------
+
+Lifeismystery:
+	- * Add tier icon to LifeismysteryUnitFrame temple

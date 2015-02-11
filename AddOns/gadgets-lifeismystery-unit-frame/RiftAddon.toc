@@ -48,7 +48,7 @@ Dependencies =
 -- X-Curse-Project-Name: Gadgets: Lifeismystery Unit Frame
 -- X-Curse-Project-ID: gadgets-lifeismystery-unit-frame
 -- X-Curse-Repository-ID: rift/gadgets-lifeismystery-unit-frame/mainline
--- X-Curse-Packaged-Version: 2.0
+-- X-Curse-Packaged-Version: 3.1
 -- X-Curse-Project-Name: Gadgets: Lifeismystery Unit Frame
 -- X-Curse-Project-ID: gadgets-lifeismystery-unit-frame
 -- X-Curse-Repository-ID: rift/gadgets-lifeismystery-unit-frame/mainline

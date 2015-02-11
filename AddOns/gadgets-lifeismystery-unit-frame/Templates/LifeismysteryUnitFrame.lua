@@ -177,7 +177,7 @@ function LifeismysteryUnitFrame:Construct(options)
 				visibilityBinding="name",
 				text="{level}", default="", outline=true, fontSize=14,
 				colorBinding="lvlColor",
-			},
+			},			
 			{
 				id="imgMentor", type="Image", parent="frame", layer=50, width=60, height=30,
 				attach = {{  point="CENTER", element="labellevel", targetPoint="CENTER", offsetX=0, offsetY=-12 }},
@@ -193,6 +193,16 @@ function LifeismysteryUnitFrame:Construct(options)
 						}, 
 				defaultIndex = "hide",
 			},
+			{
+				id="imgRank", type="MediaSet", parent="frame", layer=19, width=50, height=50,
+				attach = {{  point="CENTER", element="labellevel", targetPoint="CENTER", offsetX=0, offsetY=2 }},
+				nameBinding="tier",
+				names ={ 
+						["group"] = "Icon_group", 
+						["raid"] = "Icon_raid"
+						}, 
+				defaultIndex = "hide",
+			},			
 			{
 				id="labelName", type="Label", parent="frame", layer=20,
 				attach = {{ point="CENTERLEFT", element="labellevel", targetPoint="CENTERRIGHT", offsetX=0, offsetY=0 }},
@@ -247,36 +257,20 @@ function LifeismysteryUnitFrame:Construct(options)
 			        ["16"] = "riftMark16",
 			        ["17"] = "riftMark17",
 			        ["18"] = "riftMark18",
-			        ["19"] = "riftMark10",
-			        ["20"] = "riftMark10",
-			        ["21"] = "riftMark10",
+			        ["19"] = "riftMark19",
+			        ["20"] = "riftMark20",
+			        ["21"] = "riftMark21",
 			        ["22"] = "riftMark22",
 			        ["23"] = "riftMark23",
 			        ["24"] = "riftMark24",
 			        ["25"] = "riftMark25",
 			        ["26"] = "riftMark26",
-			        ["27"] = "riftMark09",
-					["28"] = "riftMark09",
-			        ["29"] = "riftMark09",
+			        ["27"] = "riftMark27",
+					["28"] = "riftMark28",
+			        ["29"] = "riftMark29",
 			        ["30"] = "riftMark30",
 			    },
 			    visibilityBinding="mark",alpha=0.8,
-			},
-			{
-			    id="imgMark2", type="MediaSet", parent="frameBackdrop", layer=31,
-			    attach = {{ point="CENTER", element="imgMark", targetPoint="CENTER", offsetX=0, offsetY=0  }},
-			    width = 13, height = 13,
-			    nameBinding="mark",
-			    names = 
-			    {
-			        ["19"] = "riftMark02_mini",
-			        ["20"] = "riftMark03_mini",
-			        ["21"] = "riftMark04_mini",
-			        ["27"] = "riftMark02_mini",
-					["28"] = "riftMark03_mini",
-			        ["29"] = "riftMark04_mini",
-			    },
-			    visibilityBinding="mark",alpha=1.0,
 			},
 			{
 				id="imgReady", type="ImageSet", parent="frameBackdrop", layer=30,
@@ -323,6 +317,7 @@ function LifeismysteryUnitFrame:Construct(options)
 		if element.semantic == "HoTPanel" and not options.showHoTPanel then showElement = false	end
 		if options.excludeCasts and ((element.id == "barCast") or (element.id == "labelCast") or (element.id == "labelTime")) then showElement = false end
 		if not options.showCombo and element.id == "labelCombo" then showElement = false end
+		if not options.showRankIcon and element.id == "imgRank" then showElement = false end
 		if options.shortname == true and element.id == "labelName" then 
 			element.text = "{nameShort}"
 		elseif	options.shortname == false and element.id == "labelName" then 	
@@ -350,7 +345,7 @@ function LifeismysteryUnitFrame:Construct(options)
 	
 	self:SetSecureMode("restricted")
 	self:SetMouseoverUnit(self.UnitSpec)
-	
+
 	if options.clickToTarget then
 		self.Event.LeftClick = "target @" .. self.UnitSpec
 	end

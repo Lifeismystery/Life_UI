@@ -6,8 +6,8 @@ local LifeismysteryTanksRaidFrame = WT.UnitFrame:Template("LifeismysteryTanksRai
 LifeismysteryTanksRaidFrame.Configuration.Name = "Lifeismystery Tanks Raid Frame"
 LifeismysteryTanksRaidFrame.Configuration.RaidSuitable = true
 LifeismysteryTanksRaidFrame.Configuration.FrameType = "Frame"
-LifeismysteryTanksRaidFrame.Configuration.Width = 50
-LifeismysteryTanksRaidFrame.Configuration.Height = 20
+LifeismysteryTanksRaidFrame.Configuration.Width = 200
+LifeismysteryTanksRaidFrame.Configuration.Height = 45
 LifeismysteryTanksRaidFrame.Configuration.Resizable = { 55, 40, 500, 70 }
 LifeismysteryTanksRaidFrame.Configuration.SupportsHoTPanel = true
 LifeismysteryTanksRaidFrame.Configuration.SupportsDebuffPanel = true
@@ -38,10 +38,10 @@ function LifeismysteryTanksRaidFrame:Construct(options)
 				},
 				growthDirection="left",
 				binding="healthPercent",
-				backgroundColorRaid={r=0.07, g=0.07, b=0.07, a=0.85},
-                backgroundColorBinding="backgroundColorRaid",				
+				alertHealthColor={r=0.07, g=0.07, b=0.07, a=0.85},
+                backgroundColorBinding="alertHealthColor",				
 				raidHealthColor2={r=0.5,g=0,b=0, a=0.8},
-				colorBinding="TanksHealthColor",				
+				colorBinding="raidHealthColor2",				
 			},
 			{
 				id="healthCap", type="HealthCap", parent="barHealth", layer=15,
@@ -130,34 +130,18 @@ function LifeismysteryTanksRaidFrame:Construct(options)
 			        ["16"] = "riftMark16_mini",
 			        ["17"] = "riftMark17_mini",
 			        ["18"] = "riftMark18_mini",
-			        ["19"] = "riftMark10_mini",
-			        ["20"] = "riftMark10_mini",
-			        ["21"] = "riftMark10_mini",
+			        ["19"] = "riftMark19_mini",
+			        ["20"] = "riftMark20_mini",
+			        ["21"] = "riftMark21_mini",
 			        ["22"] = "riftMark22_mini",
 			        ["23"] = "riftMark23_mini",
 			        ["24"] = "riftMark24_mini",
 			        ["25"] = "riftMark25_mini",
 			        ["26"] = "riftMark26_mini",
-			        ["27"] = "riftMark09_mini",
-					["28"] = "riftMark09_mini",
-			        ["29"] = "riftMark09_mini",
+			        ["27"] = "riftMark27_mini",
+					["28"] = "riftMark28_mini",
+			        ["29"] = "riftMark29_mini",
 			        ["30"] = "riftMark30_mini",
-			    },
-			    visibilityBinding="mark",alpha=1.0,
-			},
-			{
-			    id="imgMark2", type="MediaSet", parent="frameBackdrop", layer=31,
-			    attach = {{ point="CENTERRIGHT", element="imgMark", targetPoint="CENTERRIGHT", offsetX=7, offsetY=0 }},
-			    width = 12, height = 12,
-			    nameBinding="mark",
-			    names = 
-			    {
-			        ["19"] = "riftMark02_mini",
-			        ["20"] = "riftMark03_mini",
-			        ["21"] = "riftMark04_mini",
-			        ["27"] = "riftMark02_mini",
-					["28"] = "riftMark03_mini",
-			        ["29"] = "riftMark04_mini",
 			    },
 			    visibilityBinding="mark",alpha=1.0,
 			},

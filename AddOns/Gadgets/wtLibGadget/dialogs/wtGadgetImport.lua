@@ -4,8 +4,8 @@
                             wildtide@wildtide.net
                            DoomSprout: Rift Forums 
       -----------------------------------------------------------------
-      Gadgets Framework   : v0.6.0
-      Project Date (UTC)  : 2014-05-01T18:02:40Z
+      Gadgets Framework   : v0.7.2
+      Project Date (UTC)  : 2014-12-06T23:42:32Z
       File Modified (UTC) : 2013-09-14T10:37:55Z (Adelea)
       -----------------------------------------------------------------     
 --]]

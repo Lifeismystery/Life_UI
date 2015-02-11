@@ -4,9 +4,9 @@
                             wildtide@wildtide.net
                            DoomSprout: Rift Forums 
       -----------------------------------------------------------------
-      Gadgets Framework   : v0.6.0
-      Project Date (UTC)  : 2014-05-01T18:02:40Z
-      File Modified (UTC) : 2013-05-20T07:13:55Z (Wildtide)
+      Gadgets Framework   : v0.7.2
+      Project Date (UTC)  : 2014-12-06T23:42:32Z
+      File Modified (UTC) : 2014-06-23T17:36:15Z (Wildtide)
       -----------------------------------------------------------------     
 --]]
 
@@ -132,6 +132,7 @@ function string.wtTrim(s)
 end
 
 local pendingVisibility = {}
+local pendingFunctions = {}
 
 function WT.ShowSecureFrame(frame)
 
@@ -148,6 +149,7 @@ function WT.ShowSecureFrame(frame)
 	end
 end
 
+
 function WT.HideSecureFrame(frame)
 
 	if not frame:GetSecureMode() then
@@ -163,6 +165,18 @@ function WT.HideSecureFrame(frame)
 	end
 end
 
+
+function WT.SecureFunction(fn)
+    
+    if not Inspect.System.Secure() then
+        fn()
+    else
+        table.insert(pendingFunctions, fn)
+    end
+    
+end
+
+
 local function OnSecureEnter(hEvent)
 end
 
@@ -176,6 +190,11 @@ local function OnSecureLeave(hEvent)
 		end
 		pendingVisibility[frame] = nil
 	end
+	
+	for _, fn in ipairs(pendingFunctions) do
+	    fn()
+	end
+	pendingFunctions = {}
 end 
 
 Command.Event.Attach(Event.System.Secure.Enter, OnSecureEnter, "OnSecureEnter")
